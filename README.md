@@ -42,6 +42,7 @@ The changes outlined below were noted as things were developed.
 ```
 * Create Web application structure the Maven way (tree showing all files):
 ```
+
         D:.
         │   pom.xml
         │   README.txt
@@ -49,7 +50,7 @@ The changes outlined below were noted as things were developed.
         │   ├───main
         │   │   ├───java
         │   │   │   └───com
-        │   │   │       └───mvmlabs
+        │   │   │       └───pavikumbhar
         │   │   │           └───springboot
         │   │   │               │   Application.java
         │   │   │               │   ConfigurationForTiles.java
@@ -82,7 +83,7 @@ The changes outlined below were noted as things were developed.
 ```
 * Configure tiles by adding a new configuration class - it will be pulled in by classpath scanning:
 ```
-    package com.mvmlabs.springboot;
+    package com.pavikumbhar.springboot;
     
     import org.springframework.context.annotation.Bean;
     import org.springframework.context.annotation.Configuration;
@@ -211,7 +212,7 @@ The changes outlined below were noted as things were developed.
 ```
 * Fix the unit tests, add a new test configuration class to replace tiles configuration with one that reads the config from filesystem rather than trying to use a URL
 ```
-        package com.mvmlabs.springboot;
+        package com.pavikumbhar.springboot;
         
         import org.springframework.context.annotation.Bean;
         import org.springframework.context.annotation.Configuration;
@@ -231,7 +232,7 @@ The changes outlined below were noted as things were developed.
 ```
 * Modify the application test to include the above test configuration after application has loaded its configuration, thus ensuring that the tiles configurer is switched out.
 ```
-        package com.mvmlabs.springboot;
+        package com.pavikumbhar.springboot;
         
         import org.junit.Test;
         import org.junit.runner.RunWith;
